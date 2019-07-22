@@ -11,9 +11,12 @@ Feature:  Login
   * User : Someone who wants to create a Tools list using our application
   * Supporters: This is what the customer calls 'Admin' users.
 
+  Background: logout
+    Given I am logged out
+
   @high-impact
   Scenario Outline:  a valid user logs into the application
-    Given  I am logged out
+    #Given  I am logged out
     When I enter username "<username>" and password "<password>"
     Then the user is informed that the login is successful
     Examples:
@@ -24,6 +27,6 @@ Feature:  Login
 
     @to-do
     Scenario: an invalid user attempts to log in
-      Given I am logged out
+      #Given I am logged out
       When I enter username "attacker" and password "donotletmein"
       Then  the user is informed that the login is unsuccessful
