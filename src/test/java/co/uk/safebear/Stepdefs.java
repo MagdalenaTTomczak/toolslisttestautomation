@@ -43,7 +43,7 @@ public class Stepdefs {
     }
 
     @When("the user search for a term {string}")
-    public void the_user_search_for_a_term(String string) {
+    public void the_user_search_for_a_term(String SearchTerm) {
         // Write code here that turns the phrase above into concrete actions
         throw new cucumber.api.PendingException();
     }
