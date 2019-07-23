@@ -14,6 +14,7 @@ Feature:  Login
   Background: logout
     Given I am logged out
 
+
   @high-impact
   Scenario Outline:  a valid user logs into the application
     #Given  I am logged out
@@ -25,8 +26,16 @@ Feature:  Login
     |tester1 |letmein |
     |tester2 |letmein |
 
+
     @to-do
     Scenario: an invalid user attempts to log in
       #Given I am logged out
       When I enter username "attacker" and password "donotletmein"
       Then  the user is informed that the login is unsuccessful
+
+
+
+
+
+
+
