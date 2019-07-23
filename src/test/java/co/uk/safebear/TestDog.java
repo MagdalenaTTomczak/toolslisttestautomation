@@ -1,5 +1,6 @@
 package co.uk.safebear;
 
+import co.uk.safebear.kennals.Cost;
 import co.uk.safebear.kennals.Dog;
 import org.junit.Test;
 
@@ -19,8 +20,15 @@ public class TestDog {
         molly.setIsHomeless(false);
         sally.setIsHomeless(true);
 
+        Cost.setValue(125.0);
+
+        Cost.getValue();
+
+
         System.out.println("Bella is Homeless " + bella.getisHomeless());
 
         bella.bark();
+
+        System.out.println("Bella costs " + Cost.getValue() );
     }
 }
