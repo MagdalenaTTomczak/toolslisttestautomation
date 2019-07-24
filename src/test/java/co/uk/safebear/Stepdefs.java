@@ -1,5 +1,7 @@
 package co.uk.safebear;
 
+import co.uk.safebear.pages.LoginPage;
+import co.uk.safebear.pages.ToolsPage;
 import co.uk.safebear.utils.Driver;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
@@ -12,6 +14,8 @@ import static org.junit.Assert.*;
 
 public class Stepdefs {
 
+    LoginPage loginPage;
+    ToolsPage toolsPage;
     WebDriver driver;
 
     @Before
@@ -20,10 +24,14 @@ public class Stepdefs {
         driver = Driver.getDriver();
         // Navigate to the URL of our webpage
         driver.get(Driver.getUrl());
+
+        loginPage = new LoginPage(driver);
+        toolsPage = new ToolsPage(driver);
+
     }
 
     @After
-    public void tearDown()  {
+    public void tearDown() {
         try {
             Thread.sleep(Integer.parseInt(System.getProperty("sleep", "2000")));
         } catch (InterruptedException e) {
