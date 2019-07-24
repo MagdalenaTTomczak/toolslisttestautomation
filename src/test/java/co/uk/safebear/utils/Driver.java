@@ -36,7 +36,7 @@ public class Driver {
                 return new ChromeDriver();
 
 
-            case "chrome_headless":
+            case "CHROME_HEADLESS":
                 System.out.println("Executing on CHROME HEADLESS");
 
                 chromeOptions = new ChromeOptions();
