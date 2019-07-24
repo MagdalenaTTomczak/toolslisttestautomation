@@ -6,6 +6,7 @@ import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import jdk.internal.org.objectweb.asm.tree.TryCatchBlockNode;
 import org.openqa.selenium.WebDriver;
 
 import static org.junit.Assert.*;
@@ -15,17 +16,23 @@ public class Stepdefs {
     WebDriver driver;
 
     @Before
-    public void setUp(){
+    public void setUp() {
         //Get the driver for the browser (e.g. ChromeDriver)
         driver = Driver.getDriver();
         // Navigate to the URL of our webpage
         driver.get(Driver.getUrl());
     }
+
     @After
-    public void tearDown(){
-        Thread.sleep(Integer.parseInt(System.getProperty("sleep","2000")));
+    public void tearDown()  {
+        try {
+            Thread.sleep(Integer.parseInt(System.getProperty("sleep", "2000")));
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         driver.quit();
     }
+
     @Given("I am logged out")
     public void i_am_logged_out() {
         // Write code here that turns the phrase above into concrete actions
@@ -43,6 +50,7 @@ public class Stepdefs {
         // Write code here that turns the phrase above into concrete actions
         throw new cucumber.api.PendingException();
     }
+
     @Given("the tool list is displayed")
     public void the_tool_list_is_displayed() {
         // Write code here that turns the phrase above into concrete actions
