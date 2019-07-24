@@ -21,6 +21,7 @@ public class Driver {
 
     public static WebDriver getDriver() {
 
+        //storage for my chrome options
         ChromeOptions chromeOptions;
         switch (BROWSER.toUpperCase()) {
 
@@ -33,6 +34,29 @@ public class Driver {
 
                 // Return our Driver
                 return new ChromeDriver();
+
+
+            case "chrome_headless":
+                System.out.println("Executing on CHROME HEADLESS");
+
+                chromeOptions = new ChromeOptions();
+
+                // Set Chrome to run headlessly
+                chromeOptions.addArguments("headless");
+
+                // Make sure the window size is large and maximized
+                // So nothing disappears off screen
+                // (even in headless mode!)
+                chromeOptions.addArguments("window-size=1920,1080");
+                chromeOptions.addArguments("start-maximized");
+
+                // Set up your ChromeDriver
+                WebDriverManager.chromedriver().setup();
+
+                // Return the chromedriver with the chromeOptions set
+                return new ChromeDriver(chromeOptions);
+
+
 
 
             case "FIREFOX":
