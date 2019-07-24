@@ -1,6 +1,7 @@
 package co.uk.safebear;
 
 import co.uk.safebear.utils.Driver;
+import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -19,6 +20,11 @@ public class Stepdefs {
         driver = Driver.getDriver();
         // Navigate to the URL of our webpage
         driver.get(Driver.getUrl());
+    }
+    @After
+    public void tearDown(){
+        Thread.sleep(Integer.parseInt(System.getProperty("sleep","2000")));
+        driver.quit();
     }
     @Given("I am logged out")
     public void i_am_logged_out() {
