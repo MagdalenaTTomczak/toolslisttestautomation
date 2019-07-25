@@ -13,7 +13,7 @@ public class ToolsPageLocators {
     private By searchFieldLocator = By.id("toolName");
 
     // Locator for the search button
-    private By searchButtonLocator = By.name(".//button[.=\'Search\']");
+    private By searchButtonLocator = By.name(".//button[.='Search']");
 
     // Locator for the name of the tool which is returned - may I use "searchTerm" instead of Selenium ??
 
