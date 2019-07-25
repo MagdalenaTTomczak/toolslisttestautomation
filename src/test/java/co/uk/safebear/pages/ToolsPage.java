@@ -14,6 +14,7 @@ public class ToolsPage {
     @NonNull
     WebDriver driver;
 
+
     public String getPageTitle() {
         return driver.getTitle();
     }
