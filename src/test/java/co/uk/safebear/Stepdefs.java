@@ -10,6 +10,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.WebDriver;
 
+import static org.hamcrest.CoreMatchers.containsString;
 import static org.junit.Assert.*;
 
 public class Stepdefs {
@@ -42,21 +43,29 @@ public class Stepdefs {
 
     @Given("I am logged out")
     public void i_am_logged_out() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new cucumber.api.PendingException();
+
+        // Assert that we're on the 'login page'
+        // pages to read http://junit.sourceforge.net/javadoc/org/junit/Assert.html
+        // http://hamcrest.org/JavaHamcrest/javadoc/1.3/org/hamcrest/Matchers.html
+        // https://github.com/junit-team/junit4/wiki/matchers-and-assertthat
+
+        assertEquals("We're not on the Login Page", "Login Page", loginPage.getPageTitle());
     }
 
     @When("I enter username {string} and password {string}")
     public void i_enter_username_and_password(String username, String password) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new cucumber.api.PendingException();
+
+        loginPage.enterUsername(username);
+        loginPage.enterPassword(password);
+        loginPage.clickLoginButton();
     }
 
     @Then("the user is informed that the login is successful")
     public void the_user_is_informed_that_the_login_is_successful() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new cucumber.api.PendingException();
+        assertThat("Login Failed or the login Successful message didn't appear",
+                toolsPage.checkForSuccessfulMessage(), containsString("Login Successful"));
     }
+
 
     @Given("the tool list is displayed")
     public void the_tool_list_is_displayed() {
