@@ -1,0 +1,189 @@
+{
+	"info": {
+		"_postman_id": "771b7412-d25e-41f6-9b71-4833fc1182e1",
+		"name": "New Tool",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://toolslist.safebear.co.uk:8080/tools",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3"
+					},
+					{
+						"key": "accept-encoding",
+						"value": "gzip, deflate"
+					},
+					{
+						"key": "accept-language",
+						"value": "en-GB,en-US;q=0.9,en;q=0.8"
+					},
+					{
+						"key": "cache-control",
+						"value": "max-age=0"
+					},
+					{
+						"key": "content-length",
+						"value": "62"
+					},
+					{
+						"key": "content-type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "cookie",
+						"value": "__tawkuuid=e::safebear.co.uk::YLgfWNkmmnu/SA8koY6gDvkuaW2aGnQi2GXsSsoT3mQTpqBHdtGUYy4RbGa7kcEV::2; JSESSIONID=DE122E74850D744FF14B121DA31C0070"
+					},
+					{
+						"key": "host",
+						"value": "toolslist.safebear.co.uk:8080"
+					},
+					{
+						"key": "origin",
+						"value": "http://toolslist.safebear.co.uk:8080"
+					},
+					{
+						"key": "proxy-connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "referer",
+						"value": "http://toolslist.safebear.co.uk:8080/jsp/new-tool.jsp?"
+					},
+					{
+						"key": "upgrade-insecure-requests",
+						"value": "1"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "action=add&idTool=&name={{name}}&use={{use}}&website={{website}}"
+				},
+				"url": {
+					"raw": "http://toolslist.safebear.co.uk:8080/tools",
+					"protocol": "http",
+					"host": [
+						"toolslist",
+						"safebear",
+						"co",
+						"uk"
+					],
+					"port": "8080",
+					"path": [
+						"tools"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://toolslist.safebear.co.uk:8080/tools",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3"
+					},
+					{
+						"key": "accept-encoding",
+						"value": "gzip, deflate"
+					},
+					{
+						"key": "accept-language",
+						"value": "en-GB,en-US;q=0.9,en;q=0.8"
+					},
+					{
+						"key": "cache-control",
+						"value": "max-age=0"
+					},
+					{
+						"key": "content-length",
+						"value": "62"
+					},
+					{
+						"key": "content-type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "cookie",
+						"value": "__tawkuuid=e::safebear.co.uk::YLgfWNkmmnu/SA8koY6gDvkuaW2aGnQi2GXsSsoT3mQTpqBHdtGUYy4RbGa7kcEV::2; JSESSIONID=DE122E74850D744FF14B121DA31C0070"
+					},
+					{
+						"key": "host",
+						"value": "toolslist.safebear.co.uk:8080"
+					},
+					{
+						"key": "origin",
+						"value": "http://toolslist.safebear.co.uk:8080"
+					},
+					{
+						"key": "proxy-connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "referer",
+						"value": "http://toolslist.safebear.co.uk:8080/jsp/new-tool.jsp?"
+					},
+					{
+						"key": "upgrade-insecure-requests",
+						"value": "1"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "action=add&idTool=&name=surname2&use=surname2&website=surname2"
+				},
+				"url": {
+					"raw": "http://toolslist.safebear.co.uk:8080/tools",
+					"protocol": "http",
+					"host": [
+						"toolslist",
+						"safebear",
+						"co",
+						"uk"
+					],
+					"port": "8080",
+					"path": [
+						"tools"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "9b6443bb-3879-45ec-9de3-384cde9aba0e",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "0a63ce75-02a6-4f65-8383-141ce448c1e7",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
