@@ -14,10 +14,30 @@ public class ToolsPage {
     @NonNull
     WebDriver driver;
 
-    public String getPageTitle(){
+    public String getPageTitle() {
         return driver.getTitle();
     }
-    public String checkForSuccessfulMessage(){
+
+    public String checkForSuccessfulMessage() {
         return driver.findElement(locators.getSuccessfullLoginMessage()).getText();
     }
+
+    // Method to enter text into the Search field
+    public void enterSearchTerm(String searchTerm) {
+        driver.findElement(locators.getSearchFieldLocator()).sendKeys(searchTerm);
+
+    }
+
+    // Method to click on the Search button
+    public void clickSearchButton() {
+        driver.findElement(locators.getSearchFieldLocator()).click();
+    }
+
+    // Method to return the text in the tool name
+    public String returnTheText() {
+        return driver.findElement(locators.getReturnedToolName()).getText();
+
+
+    }
+
 }
