@@ -69,14 +69,20 @@ public class Stepdefs {
 
     @Given("the tool list is displayed")
     public void the_tool_list_is_displayed() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new cucumber.api.PendingException();
+
+        loginPage.enterUsername("tester");
+        loginPage.enterPassword("letmein");
+        loginPage.clickLoginButton();
+
+        assertEquals("Tools Page", toolsPage.getPageTitle());
+
     }
 
     @When("the user selects the tool")
     public void the_user_selects_the_tool() {
         // Write code here that turns the phrase above into concrete actions
         throw new cucumber.api.PendingException();
+
     }
 
     @Then("the tool detail page is displayed")
