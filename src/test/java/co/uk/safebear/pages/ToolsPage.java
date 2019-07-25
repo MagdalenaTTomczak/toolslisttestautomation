@@ -23,8 +23,8 @@ public class ToolsPage {
     }
 
     // Method to enter text into the Search field
-    public void enterSearchTerm(String searchTerm) {
-        driver.findElement(locators.getSearchFieldLocator()).sendKeys(searchTerm);
+    public void enterSearchTerm(String toolName) {
+        driver.findElement(locators.getSearchFieldLocator()).sendKeys(toolName);
 
     }
 
@@ -34,7 +34,7 @@ public class ToolsPage {
     }
 
     // Method to return the text in the tool name
-    public String returnTheText() {
+    public String getNameOfTheTool() {
         return driver.findElement(locators.getReturnedToolName()).getText();
 
 
